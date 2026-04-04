@@ -88,14 +88,73 @@ Visualization of early convolutional feature maps shows progressive extraction o
 
 The model is evaluated on 1,623 test images.
 
-Results:
-
-Accuracy: 93%
-
-Precision: 89.3%
-
-Recall: 71.2%
-
-Specificity: 98.2%
+**Results:**
+- **Accuracy**: 93%
+- **Precision**: 89.3%
+- **Recall**: 71.2%
+- **Specificity**: 98.2%
 
 A confusion matrix highlights typical misclassifications, and sample predictions (TP, FP, FN, TN) help interpret model behavior.
+
+---
+
+## 🚀 Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Komalpreetkaur-GH/LungScan-CNN.git
+   cd LungScan-CNN
+   ```
+
+2. **Install dependencies:**
+   It is recommended to use a virtual environment.
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## 🛠️ Usage
+
+### 1. Preprocessing & Data Generation
+Generate image patches from raw CT scans:
+```bash
+python src/data/create_images.py train
+python src/data/create_images.py test
+python src/data/create_images.py val
+```
+
+### 2. Build HDF5 Datasets
+Convert generated images into HDF5 format for efficient training:
+```bash
+python src/data/build_hdf5_datasets.py train
+python src/data/build_hdf5_datasets.py test
+python src/data/build_hdf5_datasets.py val
+```
+
+### 3. Training
+Train the CNN model:
+```bash
+python src/models/train.py
+```
+
+### 4. Prediction & Evaluation
+Evaluate the model and generate metrics/plots:
+```bash
+python src/models/predict_model.py
+```
+
+## 📂 Project Structure
+
+```text
+├── notebooks/             # Jupyter notebooks for exploration
+├── src/
+│   ├── data/              # Scripts for data preprocessing & HDF5 generation
+│   └── models/            # CNN architecture, training & prediction scripts
+├── LICENSE                # Project license
+├── Makefile               # Shortcuts for common tasks
+├── README.md              # Project documentation
+└── requirements.txt       # Python dependencies
+```
+
+## ⚖️ License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

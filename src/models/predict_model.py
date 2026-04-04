@@ -52,7 +52,7 @@ def format_image(image, num_images):
   M = image.shape[1]
   N = image.shape[2]
   imagex = np.squeeze(image[idxs, :, :, :])
-  print imagex.shape
+  print(imagex.shape)
   return imagex
 
 
@@ -209,7 +209,7 @@ def main():
   precision, recall, specificity, cm =\
    get_metrics(Y_test_labels, label_predictions)
 
-  print precision, recall, specificity 
+  print(precision, recall, specificity)
 
   # Plot non-normalized confusion matrix
   plt.figure()

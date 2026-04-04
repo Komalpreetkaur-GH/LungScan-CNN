@@ -54,9 +54,9 @@ h5f = h5py.File('../data/'+ mode+ 'dataset.h5', 'r')
 X_images = h5f['X']
 Y_labels = h5f['Y'][:]
 
-print X_images.shape
+print(X_images.shape)
 X_images = X_images[:,:,:].reshape([-1,50,50,1])
-print X_images.shape
+print(X_images.shape)
 h5f.close()
 
 h5f = h5py.File('../data/' + mode + '.h5', 'w')

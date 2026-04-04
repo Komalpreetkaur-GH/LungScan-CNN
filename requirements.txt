@@ -1,0 +1,9 @@
+tensorflow
+tflearn
+h5py
+numpy
+pandas
+joblib
+Pillow
+scikit-learn
+SimpleITK
