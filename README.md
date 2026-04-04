@@ -149,12 +149,7 @@ python src/models/predict_model.py
 ├── src/
 │   ├── data/              # Scripts for data preprocessing & HDF5 generation
 │   └── models/            # CNN architecture, training & prediction scripts
-├── LICENSE                # Project license
 ├── Makefile               # Shortcuts for common tasks
 ├── README.md              # Project documentation
 └── requirements.txt       # Python dependencies
 ```
-
-## ⚖️ License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
